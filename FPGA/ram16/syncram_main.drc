@@ -1,0 +1,8 @@
+Release 14.7 Drc P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Mon Aug 08 02:31:54 2016
+
+drc -z SyncRAM_Main.ncd SyncRAM_Main.pcf
+
+DRC detected 0 errors and 0 warnings.
