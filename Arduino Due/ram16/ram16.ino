@@ -1,9 +1,8 @@
 #include <string.h>
 
-#define MAX_TERMS 3
-#define CMD_INDX 0
-#define ADDR_INDX 1
 #define WORD_SIZE 4
+#define WORD_COUNT 16
+#define WAIT_PERIOD 50
 
 //PINS Mapping
 const unsigned int clk = 23;
@@ -19,6 +18,8 @@ void sendData(unsigned char data);
 
 unsigned char readBits(unsigned int address);
 void writeBits(unsigned int address, unsigned char data);
+void listData();
+void clearAll();
 
 void setup() {
   Serial.begin(9600);
@@ -48,26 +49,31 @@ void loop() {
     char* token = strtok((char*)(str.c_str()), " ");
     unsigned int arg1 = 0, arg2 = 0;
 
-    if(!strcmp(token, "r") || !strcmp(token, "w"))
+    if(!strcmp(token, "r") || !strcmp(token, "w") || !strcmp(token, "l") || !strcmp(token, "c"))
     {
       if(!strcmp(token, "r"))
       {
         arg1 = atoi(strtok(NULL, " "));
-        Serial.println("Reading from address " + String(arg1));
         unsigned char data = readBits(arg1);
-        Serial.println("Read data: " + String(data));
+        Serial.println("READING FROM RAM\nSENT ADDRESS: 4'd" + String(arg1) + "\nRECEIVED DATA: 4'd" + String((unsigned int)data) + "\n");
       }
       else if(!strcmp(token, "w"))
       {
         arg1 = atoi(strtok(NULL, " "));
         arg2 = atoi(strtok(NULL, " "));
-        Serial.println("Writing " + String(arg2) + " to address " + String(arg1));
+        Serial.println("WRITING TO RAM\nSENT ADDRESS: 4'd" + String(arg1) + "\nSENT DATA: 4'd" + String(arg2) + "\n");
         writeBits(arg1, arg2);
       }
-    }
-    else
-    {
-      Serial.println("Not a valid command.");
+      else if(!strcmp(token, "l"))
+      {
+        listData();
+      }
+      else if(!strcmp(token, "c"))
+      {
+        clearAll();
+      }
+      else
+        Serial.println("Not a valid command.");
     }
   }
 }
@@ -95,14 +101,13 @@ void sendData(unsigned char data){
 unsigned char readBits(unsigned int address){
   sendAddress(address);
   digitalWrite(clk, HIGH);
-  delay(100);
+  delay(WAIT_PERIOD);
   digitalWrite(clk, LOW);
 
   unsigned char data = 0;
   for(int i = 0; i < WORD_SIZE; i++)
-  {
     data |= (digitalRead(data_out[i]) << i);
-  }
+    
   return data;
 }
 
@@ -111,7 +116,22 @@ void writeBits(unsigned int address, unsigned char data){
   sendData(data);
   digitalWrite(we, HIGH);
   digitalWrite(clk, HIGH);
-  delay(100);
+  delay(WAIT_PERIOD);
   digitalWrite(clk, LOW);
   digitalWrite(we, LOW);
 }
+
+void listData()
+{
+  Serial.println("ADDRESS\t\tDATA");
+  for(int i = 0; i < WORD_COUNT; i++)
+    Serial.println("4'd" + String(i) + "\t\t4'd" + String((unsigned int)readBits(i)));
+  Serial.println();
+}
+
+void clearAll()
+{
+  for(int i = 0; i < WORD_COUNT; i++)
+    writeBits(i, 0);
+}
+

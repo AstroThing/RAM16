@@ -19,3 +19,13 @@ Net "data_out[0]" LOC="F9" | IOSTANDARD = LVCMOS33;
 Net "data_out[1]" LOC="A7" | IOSTANDARD = LVCMOS33;
 Net "data_out[2]" LOC="D7" | IOSTANDARD = LVCMOS33;
 Net "data_out[3]" LOC="E7" | IOSTANDARD = LVCMOS33;
+
+#Leds
+Net "leds[0]" LOC="C11" | IOSTANDARD = LVCMOS33;
+Net "leds[1]" LOC="D11" | IOSTANDARD = LVCMOS33;
+Net "leds[2]" LOC="B11" | IOSTANDARD = LVCMOS33;
+Net "leds[3]" LOC="A12" | IOSTANDARD = LVCMOS33;
+Net "leds[4]" LOC="A13" | IOSTANDARD = LVCMOS33;
+Net "leds[5]" LOC="B13" | IOSTANDARD = LVCMOS33;
+Net "leds[6]" LOC="A14" | IOSTANDARD = LVCMOS33;
+Net "leds[7]" LOC="B14" | IOSTANDARD = LVCMOS33;

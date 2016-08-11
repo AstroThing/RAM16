@@ -43,6 +43,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="SyncRAM_Main.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="SyncRAM_Main.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="SyncRAM_Main.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="SyncRAM_Main_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="SyncRAM_Main_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="SyncRAM_Main_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="SyncRAM_Main_map.mrp" xil_pn:subbranch="Map"/>
@@ -172,7 +173,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1470645081" xil_pn:in_ck="7242624835420238342" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-6584663967377663799" xil_pn:start_ts="1470645074">
+    <transform xil_pn:end_ts="1470810510" xil_pn:in_ck="7242624835420238342" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-6584663967377663799" xil_pn:start_ts="1470810505">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -190,11 +191,11 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1470645081" xil_pn:in_ck="132895878100720617" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-8724702807188005533" xil_pn:start_ts="1470645081">
+    <transform xil_pn:end_ts="1470810510" xil_pn:in_ck="132895878100720617" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-8724702807188005533" xil_pn:start_ts="1470810510">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1470645087" xil_pn:in_ck="-8849935042490547120" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="1748478947393664313" xil_pn:start_ts="1470645081">
+    <transform xil_pn:end_ts="1470810514" xil_pn:in_ck="-8849935042490547120" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="1748478947393664313" xil_pn:start_ts="1470810510">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="SyncRAM_Main.bld"/>
@@ -203,7 +204,7 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1470645092" xil_pn:in_ck="-8849935042490547119" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-872484039588261087" xil_pn:start_ts="1470645087">
+    <transform xil_pn:end_ts="1470810517" xil_pn:in_ck="-8849935042490547119" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-872484039588261087" xil_pn:start_ts="1470810514">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -218,7 +219,7 @@
       <outfile xil_pn:name="SyncRAM_Main_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1470645111" xil_pn:in_ck="6565445925184099306" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1470645092">
+    <transform xil_pn:end_ts="1470810526" xil_pn:in_ck="6565445925184099306" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1470810517">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="SyncRAM_Main.ncd"/>
@@ -232,7 +233,7 @@
       <outfile xil_pn:name="SyncRAM_Main_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1470645148" xil_pn:in_ck="2053245109769500132" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1470645111">
+    <transform xil_pn:end_ts="1470810563" xil_pn:in_ck="2053245109769500132" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1470810526">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="SyncRAM_Main.ut"/>
@@ -244,7 +245,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1470645111" xil_pn:in_ck="-8849935042490547251" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1470645108">
+    <transform xil_pn:end_ts="1470810526" xil_pn:in_ck="-8849935042490547251" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1470810524">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="SyncRAM_Main.twr"/>

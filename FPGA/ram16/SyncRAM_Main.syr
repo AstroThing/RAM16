@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: SyncRAM_Main.prj
 
@@ -236,7 +236,7 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 14
+# IOs                              : 22
 
 Cell Usage :
 # BELS                             : 1
@@ -247,9 +247,9 @@ Cell Usage :
 #      RAM16X1S                    : 4
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 13
+# IO Buffers                       : 21
 #      IBUF                        : 9
-#      OBUF                        : 4
+#      OBUF                        : 12
 =========================================================================
 
 Device utilization summary:
@@ -262,8 +262,8 @@ Selected Device : 3s500eft256-5
  Number of 4 input LUTs:                  5  out of   9312     0%  
     Number used as logic:                 1
     Number used as RAMs:                  4
- Number of IOs:                          14
- Number of bonded IOBs:                  14  out of    190     7%  
+ Number of IOs:                          22
+ Number of bonded IOBs:                  22  out of    190    11%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -299,9 +299,9 @@ Timing Summary:
 Speed Grade: -5
 
    Minimum period: 2.279ns (Maximum Frequency: 438.789MHz)
-   Minimum input arrival time before clock: 3.439ns
+   Minimum input arrival time before clock: 3.493ns
    Maximum output required time after clock: 4.040ns
-   Maximum combinational path delay: No path found
+   Maximum combinational path delay: 4.972ns
 
 Timing Detail:
 --------------
@@ -332,7 +332,7 @@ Delay:               2.279ns (Levels of Logic = 0)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 44 / 32
 -------------------------------------------------------------------------
-Offset:              3.439ns (Levels of Logic = 2)
+Offset:              3.493ns (Levels of Logic = 2)
   Source:            address<3> (PAD)
   Destination:       ram/read_data_3 (FF)
   Destination Clock: clk rising
@@ -341,12 +341,12 @@ Offset:              3.439ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             8   1.106   0.643  address_3_IBUF (address_3_IBUF)
+     IBUF:I->O             9   1.106   0.697  address_3_IBUF (leds_7_OBUF)
      RAM16X1S:A3->O        1   1.065   0.357  ram/Mram_mem1 (ram/_varindex0000<0>)
      FDE:D                     0.268          ram/read_data_0
     ----------------------------------------
-    Total                      3.439ns (2.439ns logic, 1.000ns route)
-                                       (70.9% logic, 29.1% route)
+    Total                      3.493ns (2.439ns logic, 1.054ns route)
+                                       (69.8% logic, 30.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -368,14 +368,32 @@ Offset:              4.040ns (Levels of Logic = 1)
                                        (91.2% logic, 8.8% route)
 
 =========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               4.972ns (Levels of Logic = 2)
+  Source:            address<3> (PAD)
+  Destination:       leds<7> (PAD)
+
+  Data Path: address<3> to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   1.106   0.697  address_3_IBUF (leds_7_OBUF)
+     OBUF:I->O                 3.169          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                      4.972ns (4.275ns logic, 0.697ns route)
+                                       (86.0% logic, 14.0% route)
+
+=========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.60 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.87 secs
  
 --> 
 
-Total memory usage is 210944 kilobytes
+Total memory usage is 210304 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 5 -n
 3 -fastpaths -xml SyncRAM_Main.twx SyncRAM_Main.ncd -o SyncRAM_Main.twr
-SyncRAM_Main.pcf
+SyncRAM_Main.pcf -ucf SyncRAM.ucf
 
 Design file:              SyncRAM_Main.ncd
 Physical constraint file: SyncRAM_Main.pcf
@@ -45,15 +45,15 @@ Setup/Hold to clock clk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-address<0>  |    0.260(R)|    1.410(R)|clk_BUFGP         |   0.000|
-address<1>  |    0.769(R)|    1.003(R)|clk_BUFGP         |   0.000|
-address<2>  |    0.083(R)|    1.552(R)|clk_BUFGP         |   0.000|
-address<3>  |    1.191(R)|    0.666(R)|clk_BUFGP         |   0.000|
-data_in<0>  |    0.166(R)|    1.284(R)|clk_BUFGP         |   0.000|
-data_in<1>  |   -0.095(R)|    1.492(R)|clk_BUFGP         |   0.000|
-data_in<2>  |   -0.070(R)|    1.472(R)|clk_BUFGP         |   0.000|
-data_in<3>  |    0.029(R)|    1.393(R)|clk_BUFGP         |   0.000|
-we          |    0.984(R)|    0.987(R)|clk_BUFGP         |   0.000|
+address<0>  |    1.551(R)|    1.395(R)|clk_BUFGP         |   0.000|
+address<1>  |    1.437(R)|    1.356(R)|clk_BUFGP         |   0.000|
+address<2>  |    0.933(R)|    1.259(R)|clk_BUFGP         |   0.000|
+address<3>  |    0.956(R)|    1.126(R)|clk_BUFGP         |   0.000|
+data_in<0>  |    0.411(R)|    1.082(R)|clk_BUFGP         |   0.000|
+data_in<1>  |    1.113(R)|    0.520(R)|clk_BUFGP         |   0.000|
+data_in<2>  |   -0.086(R)|    1.480(R)|clk_BUFGP         |   0.000|
+data_in<3>  |   -0.110(R)|    1.499(R)|clk_BUFGP         |   0.000|
+we          |    2.343(R)|    0.965(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -61,14 +61,28 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-data_out<0> |    7.017(R)|clk_BUFGP         |   0.000|
-data_out<1> |    7.004(R)|clk_BUFGP         |   0.000|
-data_out<2> |    7.222(R)|clk_BUFGP         |   0.000|
-data_out<3> |    6.484(R)|clk_BUFGP         |   0.000|
+data_out<0> |    7.146(R)|clk_BUFGP         |   0.000|
+data_out<1> |    7.421(R)|clk_BUFGP         |   0.000|
+data_out<2> |    7.163(R)|clk_BUFGP         |   0.000|
+data_out<3> |    7.106(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+address<0>     |leds<4>        |    5.414|
+address<1>     |leds<5>        |    5.460|
+address<2>     |leds<6>        |    5.100|
+address<3>     |leds<7>        |    5.407|
+data_in<0>     |leds<0>        |    5.031|
+data_in<1>     |leds<1>        |    5.730|
+data_in<2>     |leds<2>        |    5.067|
+data_in<3>     |leds<3>        |    5.596|
+---------------+---------------+---------+
 
-Analysis completed Mon Aug 08 02:31:51 2016 
+
+Analysis completed Wed Aug 10 00:28:46 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:

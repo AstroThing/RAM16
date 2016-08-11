@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-08-08T02:39:35</DateModified>
+  <DateModified>2016-08-09T23:35:08</DateModified>
   <ModuleName>SyncRAM_Main</ModuleName>
   <SummaryTimeStamp>2016-08-08T02:32:28</SummaryTimeStamp>
   <SavedFilePath>C:/Users/nimer/Documents/ram16/FPGA/ram16/iseconfig/SyncRAM_Main.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/nimer/Documents/ram16/FPGA/ram16</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/nimer/Documents/ram16/FPGA/ram16\</ImplementationReportsDirectory>
   <DateInitialized>2016-08-08T02:23:28</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -1,8 +1,30 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Aug 08 02:31:30 2016
+// Written by: Map P.20131013 on Wed Aug 10 00:28:36 2016
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "clk" LOCATE = SITE "A10" LEVEL 1;
+COMP "leds<0>" LOCATE = SITE "C11" LEVEL 1;
+COMP "leds<1>" LOCATE = SITE "D11" LEVEL 1;
+COMP "we" LOCATE = SITE "E11" LEVEL 1;
+COMP "leds<2>" LOCATE = SITE "B11" LEVEL 1;
+COMP "leds<3>" LOCATE = SITE "A12" LEVEL 1;
+COMP "leds<4>" LOCATE = SITE "A13" LEVEL 1;
+COMP "leds<5>" LOCATE = SITE "B13" LEVEL 1;
+COMP "address<0>" LOCATE = SITE "E10" LEVEL 1;
+COMP "leds<6>" LOCATE = SITE "A14" LEVEL 1;
+COMP "address<1>" LOCATE = SITE "D10" LEVEL 1;
+COMP "leds<7>" LOCATE = SITE "B14" LEVEL 1;
+COMP "address<2>" LOCATE = SITE "E9" LEVEL 1;
+COMP "address<3>" LOCATE = SITE "A9" LEVEL 1;
+COMP "data_out<0>" LOCATE = SITE "F9" LEVEL 1;
+COMP "data_out<1>" LOCATE = SITE "A7" LEVEL 1;
+COMP "data_out<2>" LOCATE = SITE "D7" LEVEL 1;
+COMP "data_out<3>" LOCATE = SITE "E7" LEVEL 1;
+COMP "data_in<0>" LOCATE = SITE "D9" LEVEL 1;
+COMP "data_in<1>" LOCATE = SITE "E8" LEVEL 1;
+COMP "data_in<2>" LOCATE = SITE "C8" LEVEL 1;
+COMP "data_in<3>" LOCATE = SITE "D8" LEVEL 1;
 NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
 SCHEMATIC END;
 
